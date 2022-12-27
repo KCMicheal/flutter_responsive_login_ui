@@ -39,6 +39,7 @@ const LoginScreen({ Key? key }) : super(key: key);
               const LoginField(
                 hintText: 'Password',
               ),
+              const SizedBox(height: 15,),
               const GradientButton(),
             ],
           ) ,
