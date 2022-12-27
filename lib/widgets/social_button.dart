@@ -5,7 +5,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 class SocialButton extends StatelessWidget {
   final String iconPath;
   final String label;
-const SocialButton({ Key? key, required this.iconPath, required this.label }) : super(key: key);
+  final double horizontalPadding;
+const SocialButton({ Key? key, required this.iconPath, required this.label, this.horizontalPadding = 100 }) : super(key: key);
 
   @override
   Widget build(BuildContext context){
@@ -22,7 +23,7 @@ const SocialButton({ Key? key, required this.iconPath, required this.label }) : 
         ),
       ),
       style: TextButton.styleFrom(
-        padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 100),
+        padding:  EdgeInsets.symmetric(vertical: 30, horizontal: horizontalPadding),
         shape: RoundedRectangleBorder(
           side: const BorderSide(
             color: Pallete.borderColor,
